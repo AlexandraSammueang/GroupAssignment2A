@@ -99,7 +99,7 @@ namespace GroupAssignment2
             cards = cards.Take(cards.Count() - 1).ToArray(); //Tar bort sista kortet
             //YOUR CODE
             //to return the Top card of the deck and reduce the nr of cards in the deck
-            return null;
+            return temp1;
         }
 
         public DeckOfCards()
