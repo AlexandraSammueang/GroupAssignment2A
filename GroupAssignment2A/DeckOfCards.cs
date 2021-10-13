@@ -46,20 +46,14 @@ namespace GroupAssignment2
         /// </summary>
         public void Shuffle()
         {
-            var rnd = new Random();
-
-            for (int f = 0; f<1000;f++ )
             {
-                for (int unSorted = 0; unSorted < cards.Length; unSorted++)
-                {
-                    var tmp = cards[unSorted]; // saves the first element in tmp-variabel and continuie to 52
-                    var index = rnd.Next(0, unSorted + 1); // Find the index position and add 
-                    cards[unSorted] = cards[index]; // put in the value in a position 
-                    cards[index] = tmp; // and put new tmp 
-
-                }
+                var rnd = new Random(); //rnd is now a random generator - see .NET documentation            
+                cards = cards.OrderBy(x => rnd.Next()).ToArray();
+                //YOUR CODE
+                //to shuffle the deck.
+                //Hint: pick two cards in the deck randomly and swap them. Do this 1000 times
             }
-            
+
             //rnd is now a random generator - see .NET documentation
 
             //YOUR CODE
